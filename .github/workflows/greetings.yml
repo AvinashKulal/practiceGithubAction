@@ -1,7 +1,16 @@
 name: Greetings
 
-on: [pull_request, issues]
-
+on:
+  pull_request:
+    branches: [ main ]
+  issues:
+    branches: [ main ]
+  workflow_dispatch:
+    inputs:
+      myTestInp:
+        description: "Test description"
+        default: "this is the deafult value"
+        required: true
 jobs:
   greeting:
     runs-on: ubuntu-latest
