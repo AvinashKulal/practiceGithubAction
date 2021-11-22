@@ -17,6 +17,8 @@ on:
         description: 'test user input'
         required: true
         default: 'Default-Test-Input'
+      tags:
+        description: 'test tag'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
