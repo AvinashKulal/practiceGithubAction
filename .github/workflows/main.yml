@@ -38,5 +38,6 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo Script start running
-          echo "Store ${{ github.event.inputs.testInput }}"
+          echo "Store ${{ github.event.inputs.testInput }} - input"
+          INPUT_STORE=${{ github.event.inputs.testInput }} python read-env-value.py
           
